@@ -1,0 +1,409 @@
+/* Initialize the background loader */
+
+@keyframes backgroundLoader {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    backdrop-filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    /* backdrop-filter: blur(5px); */
+  }
+}
+@-webkit-keyframes backgroundLoader {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    backdrop-filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    /* backdrop-filter: blur(5px); */
+  }
+}
+
+/* End of init Background Loader */
+
+/* Initialize the queries */
+
+@media screen and (max-width: 850px) {
+  .container {
+    flex-direction: column !important;
+  }
+}
+
+@keyframes colorful {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* End of init queries */
+
+/* Initialize the CSS */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  appearance: none;
+  border-style: none;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.headertitle {
+  font-size: 7.5vh;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin: 10% 10%;
+  line-height: 1.1em;
+  z-index: 1;
+}
+
+/* End of init */
+
+/* Initialize the scrollBar */
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: #161623;
+
+  overflow-x: hidden;
+  overflow-y: overlay;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  height: 56px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: #888;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+*::-webkit-scrollbar-thumb:window-inactive {
+  background: none;
+}
+
+/* End of init scrollBar */
+
+/* Initialize the circles in the background */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f00, #f0f);
+  clip-path: circle(30% at right 70%);
+  z-index: -10;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+
+  -moz-animation: backgroundLoader 1s ease-in;
+  /* Firefox */
+  -webkit-animation: backgroundLoader 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: backgroundLoader 1s ease-in;
+  /* Opera */
+  animation: backgroundLoader 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#2196f3, #e91e63 60%);
+  clip-path: circle(20% at 5% 10%);
+  z-index: -10;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+
+  -moz-animation: backgroundLoader 1s ease-in;
+  /* Firefox */
+  -webkit-animation: backgroundLoader 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: backgroundLoader 1s ease-in;
+  /* Opera */
+  animation: backgroundLoader 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#circle {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#2196f3, #e91e63);
+  clip-path: circle(10% at 0% 97.5%);
+  z-index: -10;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+
+  -moz-animation: backgroundLoader 1s ease-in;
+  /* Firefox */
+  -webkit-animation: backgroundLoader 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: backgroundLoader 1s ease-in;
+  /* Opera */
+  animation: backgroundLoader 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+/* .backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  backdrop-filter: blur(3px);
+} */
+
+/* End of init circles */
+
+/* Initialize the Cards */
+
+body .container {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+body .container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 4em 4em 4em;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+}
+
+body .container .card .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+body .container .card .content .img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+
+body .container .card .content .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+body .container .card .content .cardContent h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+body .container .card .content .cardContent h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+
+.card a:hover {
+  cursor: default;
+}
+
+.card .sci li a:hover {
+  cursor: pointer;
+}
+
+body .container .card .sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+body .container .card .sci li {
+  margin: 0 10px;
+  transform: translateY(40px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+body .container .card .sci li a {
+  font-size: 24px;
+}
+
+body .container .card:hover .content {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+body .container .card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Initialize the Logos in Cards */
+
+.imageDescription {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.imageDescription span {
+  opacity: 0;
+  /* width: 0; */
+  top: 100%;
+  position: absolute;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.imageDescription:hover img {
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+
+.imageDescription:hover span {
+  opacity: 1;
+  transition: 0.5s;
+  width: 100;
+  position: absolute;
+  top: 100%;
+  
+}
+
+/* End of init Logos in Cards */
+
+/* End of init Cards */
+
+/* Initialize the show animation (associated with JS) */
+
+.hidden {
+  width: 100%;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(10%);
+  transition: all 1s ease-in-out;
+}
+
+.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.card:nth-child(1) { /* Add this for multiple objects having different time to appear */
+  transition-delay: -0.3s;
+}
+
+/* End of init JS */
+
+/* Initialize the Footer */
+
+footer {
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1;
+  font-size: 2.5vh;
+}
+
+footer div {
+  margin-bottom: 5vh;
+}
+
+/* End of init footer */

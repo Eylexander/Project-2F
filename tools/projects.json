@@ -1,0 +1,70 @@
+{
+    "Proxmox" : {
+        "name" : "Proxmox",
+        "description" : "Virtual machine hosting",
+        "image" : "ProxmoxIcon.png",
+        "options" : {
+            "url" : "https://proxserv.eylexander.xyz/"
+        }
+    },
+    "NextCloud" : {
+        "name" : "NextCloud",
+        "description" : "Personnal Cloud storage for files",
+        "image" : "NextCloudIcon.svg",
+        "options" : {
+            "url" : "https://cloud.eylexander.xyz/"
+        }
+    },
+    "MemesGenerator" : {
+        "name" : "Memes Generator",
+        "description" : "NodeJS API for generating memes",
+        "image" : "NodeJSIcon.svg",
+        "options" : {
+            "github" : "https://github.com/Eylexander/Project-2E#readme",
+            "readme" : "https://memes.eylexander.xyz/api/v1/",
+            "url" : "https://memes.eylexander.xyz/Generator"
+        }
+    },
+    "PortFolio" : {
+        "name" : "Portfolio",
+        "description" : "Home for old projects",
+        "image" : "DevLogo.png",
+        "options" : {
+            "github" : "https://github.com/Eylexander/Project-2B#readme",
+            "url" : "https://portfolio.eylexander.xyz/"
+        }
+    },
+    "DiscordJSAPI" : {
+        "name" : "DiscordJS API",
+        "description" : "NodeJS API for DiscordJS",
+        "image" : "DiscordIcon.png",
+        "options" : {
+            "github" : "https://github.com/Eylexander/Project-1B#readme",
+            "url" : "https://discord.eylexander.xyz/api/v1/"
+        }
+    },
+    "UptimeKuma" : {
+        "name" : "Uptime Kuma",
+        "description" : "Uptime monitor for websites",
+        "image" : "UptimeKumaIcon.svg",
+        "options" : {
+            "url" : "https://status.eylexander.xyz/"
+        }
+    },
+    "WikiJS" : {
+        "name" : "WikiJS",
+        "description" : "Wiki for my projects",
+        "image" : "WikiJSIcon.png",
+        "options" : {
+            "url" : "https://wiki.eylexander.xyz/"
+        }
+    },
+    "Pterodactyl" : {
+        "name" : "Pterodactyl",
+        "description" : "Game server hosting",
+        "image" : "PterodactylIcon.png",
+        "options" : {
+            "url" : "https://ptero.eylexander.xyz/"
+        }
+    }
+}
